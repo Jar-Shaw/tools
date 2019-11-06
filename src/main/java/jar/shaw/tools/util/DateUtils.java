@@ -1,12 +1,9 @@
 package jar.shaw.tools.util;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.text.*;
 import java.util.*;
 import java.util.regex.Pattern;
 
-import static jar.shaw.tools.util.ExceptionHelper.runtime;
 
 /**
  * @author 肖佳
@@ -116,7 +113,7 @@ public class DateUtils {
     public static String formatDateString(String dateString, String formatter)
     {
         DateFormat dateFormat = new SimpleDateFormat(formatter);
-        return dateFormat.format(getDateFormat(dateString));
+        return dateFormat.format(getDateFromString(dateString));
     }
 
     /**
